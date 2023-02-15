@@ -89,7 +89,9 @@ public:
     }
 };
 int main(){
-    string str = "[][][]]]";
+    
+    string str;
+    cin>>str;
     BracketDetector b;
     b.CheckBrack(str);
 }
