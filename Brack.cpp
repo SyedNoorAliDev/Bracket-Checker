@@ -28,7 +28,7 @@ public:
         }
         return false;
     }
-    bool CheckBrack(string str){
+    bool CheckBrackets(string str){
         str = stringMaker(str);
         if (isEven(str)){
             cout<<endl<<"Entering in for loop"<<endl;
@@ -63,7 +63,7 @@ public:
                 }
 
             }
-            errorGenerator(str);
+            errorDescriptionGenerator(str);
         } else {
             cout<<endl<<"Odd Number of Brackets"<<endl;
         }
@@ -74,7 +74,7 @@ public:
     int errorLocation2(){
         return errorLoc2;
     }
-    void errorGenerator(string str){
+    void errorDescriptionGenerator(string str){
         if (st.getTop()>-1){
             cout<<endl<<"ERROR: No. of (Open Brackets > Closed brackets)"<<endl;
             cout<<endl<<"Description: Unclosed brackets at "<<errorLocation1()<<endl;
@@ -93,5 +93,5 @@ int main(){
     string str;
     cin>>str;
     BracketDetector b;
-    b.CheckBrack(str);
+    b.CheckBrackets(str);
 }
